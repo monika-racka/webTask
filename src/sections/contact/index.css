@@ -39,19 +39,8 @@
       }
 
       & .submit {
-        max-width: 16rem;
-        border-radius: 6px;
-        border: none;
-        text-align: center;
         background-color: #ed4c5c;
         color: white;
-        text-wrap: nowrap;
-        padding: 1.7rem 3.4rem;
-        font-size: 1.4rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
       }
     }
   }

@@ -1,0 +1,14 @@
+.buttonComponent {
+  padding: 1.7rem 3.4rem;
+  border-radius: 6px;
+  border: none;
+  text-align: center;
+  background-color: white;
+  color: black;
+  text-wrap: nowrap;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

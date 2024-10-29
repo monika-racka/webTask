@@ -1,15 +1,8 @@
-import { useState, useCallback } from "react";
+import Button from "../../components/button";
 import Heading from "../../components/heading";
 import Text from "../../components/text";
 import FormInput from "../../components/formInput";
 import "./index.css";
-
-const defaultFormData = {
-  firstName: "",
-  lastName: "",
-  phoneNumber: "",
-  interests: "",
-};
 
 const Contact = () => {
   return (
@@ -18,10 +11,7 @@ const Contact = () => {
       <div className="container">
         <div className="content">
           <Heading level={2}>Contact</Heading>
-          <Text
-            size="14px"
-            className="description"
-          >
+          <Text size="14px" className="description">
             Questions or concerns? Just fill out the form below and our support
             team will get back to you within 24 hours
           </Text>
@@ -59,9 +49,9 @@ const Contact = () => {
             style="full"
             className="input"
           />
-          <button className="submit" type="submit">
+          <Button className="submit" type="submit">
             Submit now
-          </button>
+          </Button>
         </form>
       </div>
     </section>
