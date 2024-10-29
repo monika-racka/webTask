@@ -1,27 +1,11 @@
 import { useState, useCallback } from "react";
 import Button from "../../components/button";
+import FormInput from "../../components/formInput";
 import Heading from "../../components/heading";
 import Text from "../../components/text";
-import FormInput from "../../components/formInput";
+import { inputFields, defaultFormData } from "./consts";
+import { getPhoneNumber } from "./utils";
 import "./index.css";
-
-const inputFields = [
-  { type: "text", name: "firstName", placeholder: "First Name" },
-  { type: "text", name: "lastName", placeholder: "Last Name" },
-  { type: "tel", name: "phoneNumber", placeholder: "Phone Number" },
-  {
-    type: "text",
-    name: "interests",
-    placeholder: "What Service are you interested in?",
-  },
-];
-
-const defaultFormData = {
-  firstName: "",
-  lastName: "",
-  phoneNumber: "",
-  interests: "",
-};
 
 const Contact = () => {
   const [formData, setFormData] = useState(defaultFormData);
@@ -37,14 +21,6 @@ const Contact = () => {
       ...prevData,
       [name]: value,
     }));
-  }, []);
-
-  const getPhoneNumber = useCallback((value) => {
-    if (value.length > 9) {
-      value = value.slice(0, 9);
-    }
-
-    return value.match(/.{1,3}/g)?.join(" ") || "";
   }, []);
 
   const handlePhoneNumberChange = useCallback((event) => {
