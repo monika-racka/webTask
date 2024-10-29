@@ -58,6 +58,7 @@ const Contact = () => {
         <form className="form">
           {inputFields.map(({ type, name, placeholder }, index) => (
             <FormInput
+              key={name}
               type={type}
               name={name}
               placeholder={placeholder}
