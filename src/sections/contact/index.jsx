@@ -4,6 +4,17 @@ import Text from "../../components/text";
 import FormInput from "../../components/formInput";
 import "./index.css";
 
+const InputFields = [
+  { type: "text", name: "firstName", placeholder: "First Name" },
+  { type: "text", name: "lastName", placeholder: "Last Name" },
+  { type: "tel", name: "phoneNumber", placeholder: "Phone Number" },
+  {
+    type: "text",
+    name: "interests",
+    placeholder: "What Service are you interested in?",
+  },
+];
+
 const Contact = () => {
   return (
     //id could be used for navigation
@@ -17,38 +28,16 @@ const Contact = () => {
           </Text>
         </div>
         <form className="form">
-          <div className="name">
+          {InputFields.map(({ type, name, placeholder }, index) => (
             <FormInput
-              type="text"
-              name="firstName"
-              placeholder="First Name"
+              type={type}
+              name={name}
+              placeholder={placeholder}
               required={true}
               className="input"
+              style={index >= 2 ? "full" : "half"}
             />
-            <FormInput
-              type="text"
-              name="lastName"
-              placeholder="Last Name"
-              required={true}
-              className="input"
-            />
-          </div>
-          <FormInput
-            type="tel"
-            name="phoneNumber"
-            placeholder="Phone Number"
-            required={true}
-            style="full"
-            className="input"
-          />
-          <FormInput
-            type="text"
-            name="interests"
-            placeholder="What Service are you interested in?"
-            required={true}
-            style="full"
-            className="input"
-          />
+          ))}
           <Button className="submit" type="submit">
             Submit now
           </Button>

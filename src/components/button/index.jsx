@@ -1,19 +1,18 @@
 import "./index.css";
 
-export const Button = (
+export const Button = ({
   children,
   onClick,
   className,
   type = "button",
   disabled,
-  isLoading
-) => (
+  isLoading,
+}) => (
   <button
     type={type}
     onClick={onClick}
-    className={`buttonComponent ${className}`}
+    className={`buttonComponent ${className}`} // package `classnames` can be used here for cleaner and more readable conditional class handling
     disabled={disabled}
-    ref={ref}
   >
     {isLoading ? "Loading..." : children}
   </button>
