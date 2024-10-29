@@ -24,11 +24,9 @@ const Contact = () => {
   }, []);
 
   const handlePhoneNumberChange = useCallback((event) => {
-    const value = event.target.value.replace(/\D/g, "");
-
     setFormData((prevData) => ({
       ...prevData,
-      phoneNumber: getPhoneNumber(value),
+      phoneNumber: getPhoneNumber(event.target.value),
     }));
   }, []);
 
