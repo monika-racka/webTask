@@ -1,3 +1,58 @@
-.contact {
-  height: 30rem;
+.contactSection {
+  padding: 9rem 0;
+  background-color: white;
+
+  & .container {
+    margin: 0 auto;
+    padding: 0 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    @media (min-width: 700px) {
+      flex-direction: row;
+      max-width: 111rem;
+      justify-content: space-between;
+    }
+
+    & .content {
+      max-width: 43.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+
+      & .description {
+        line-height: 19.6px;
+        text-align: justify;
+      }
+    }
+
+    & .form {
+      & .name {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+
+        & input {
+          margin: 0;
+        }
+      }
+
+      & .submit {
+        max-width: 16rem;
+        border-radius: 6px;
+        border: none;
+        text-align: center;
+        background-color: #ed4c5c;
+        color: white;
+        text-wrap: nowrap;
+        padding: 1.7rem 3.4rem;
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+  }
 }
